@@ -1,6 +1,5 @@
 package app.intech
 
-class UniqueAppWords {
     object UniqueAppWords {
         fun process(input: List<String?>): List<String> {
             return input
@@ -9,4 +8,3 @@ class UniqueAppWords {
                 .distinct() // Уникальные значения
         }
     }
-}

@@ -9,14 +9,14 @@ class UniqueAppWordsTest {
     @Test
     fun `replace a and A with 4, uppercase, unique values`() {
         val input = listOf("ANNA", "ann4", "-1", null, "test")
-        val result = UniqueAppWords.UniqueAppWords.process(input)
+        val result = UniqueAppWords.process(input)
         expectThat(result).containsExactly("4NN4", "-1", "TEST")
     }
 
     @Test
     fun `duplicates removed after processing`() {
         val input = listOf("apple", "APPLE", "aPPle")
-        val result = UniqueAppWords.UniqueAppWords.process(input)
+        val result = UniqueAppWords.process(input)
         expectThat(result).containsExactly("4PPLE")
     }
 
